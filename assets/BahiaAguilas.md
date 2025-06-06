@@ -9,5 +9,3 @@ La biodiversidad en esta zona es notable. Es hogar de especies endémicas como l
 El acceso a la playa puede hacerse por vía terrestre, preferiblemente en vehículos todo terreno debido al estado del camino, o por vía marítima en botes que salen desde la comunidad de La Cueva. Este trayecto en bote permite además disfrutar de la vista panorámica de los acantilados y aguas cristalinas que rodean la bahía.
 
 Visitar Bahía de las Águilas es una experiencia única que combina ecoturismo, belleza escénica y un profundo respeto por la naturaleza. Se recomienda llevar protector solar biodegradable, suficiente agua potable, alimentos y, sobre todo, regresar con toda la basura generada, ya que no hay servicios en la playa. También está prohibido hacer fogatas o actividades que puedan dañar el entorno.
-
-![Descripción de la imagen](../imagenes/foto1.jfif)
