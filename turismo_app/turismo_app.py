@@ -1,4 +1,5 @@
 import reflex as rx
+from typing import List, Dict
 
 
 
@@ -29,6 +30,7 @@ def index() -> rx.Component:
             margin="0 auto",
             padding_x="1em",
         ),
+        footer(),
         font_family="Arial, sans-serif",
         color="#333",
         bg="#2C3949",
@@ -285,6 +287,7 @@ def packages_section() -> rx.Component:
             "features": ["Actividades infantiles", "Piscina familiar", "Show nocturno"]
         }
     ]
+    
 
     rows = [packages[i:i + 3] for i in range(0, len(packages), 3)]
 
@@ -536,7 +539,6 @@ def popular_places() -> rx.Component:
         bg="#2C3949",
     )
 
-from typing import List, Dict
 
 class State(rx.State):
     current_slide: int = 0
@@ -640,6 +642,152 @@ def provinces_carousel() -> rx.Component:
         width="100%",
         bg="#2C3949",
     )
+
+def footer_item(text: str, href: str) -> rx.Component:
+    return rx.link(
+        rx.text(text, size="3", color="rgba(255, 255, 255, 0.8)"),
+        href=href,
+        _hover={"color": "white"}
+    )
+
+def footer_items_destinations() -> rx.Component:
+    return rx.flex(
+        rx.heading(
+            "DESTINOS", size="4", weight="bold", as_="h3", color="white"
+        ),
+        footer_item("Punta Cana", "/#"),
+        footer_item("Santo Domingo", "/#"),
+        footer_item("Samaná", "/#"),
+        footer_item("Santiago", "/#"),
+        footer_item("Puerto Plata", "/#"),
+        spacing="4",
+        text_align=["center", "center", "start"],
+        flex_direction="column",
+    )
+
+def footer_items_services() -> rx.Component:
+    return rx.flex(
+        rx.heading(
+            "SERVICIOS", size="4", weight="bold", as_="h3", color="white"
+        ),
+        footer_item("Paquetes Turísticos", "/#"),
+        footer_item("Tours Privados", "/#"),
+        footer_item("Transporte", "/#"),
+        footer_item("Alojamiento", "/#"),
+        footer_item("Excursiones", "/#"),
+        spacing="4",
+        text_align=["center", "center", "start"],
+        flex_direction="column",
+    )
+
+def footer_items_company() -> rx.Component:
+    return rx.flex(
+        rx.heading(
+            "EMPRESA", size="4", weight="bold", as_="h3", color="white"
+        ),
+        footer_item("Sobre Nosotros", "/#"),
+        footer_item("Nuestro Equipo", "/#"),
+        footer_item("Testimonios", "/#"),
+        footer_item("Blog", "/#"),
+        footer_item("Contacto", "/#"),
+        spacing="4",
+        text_align=["center", "center", "start"],
+        flex_direction="column",
+    )
+
+def social_link(icon: str, href: str) -> rx.Component:
+    return rx.link(
+        rx.icon(icon, color="rgba(255, 255, 255, 0.8)", size=20),
+        href=href,
+        _hover={"color": "white", "transform": "scale(1.1)"},
+        transition="all 0.2s"
+    )
+
+def socials() -> rx.Component:
+    return rx.flex(
+        social_link("instagram", "/#"),
+        social_link("twitter", "/#"),
+        social_link("facebook", "/#"),
+        social_link("youtube", "/#"),
+        spacing="4",
+        justify="center",
+        flex_shrink="0",
+    )
+
+def footer() -> rx.Component:
+    return rx.el.footer(
+        rx.container(
+            rx.vstack(
+                rx.flex(
+                    rx.vstack(
+                        rx.hstack(
+                            rx.heading(
+                                "RDExperience",
+                                size="7",
+                                weight="bold",
+                                color="white",
+                            ),
+                            align_items="center",
+                        ),
+                        rx.text(
+                            "Tu mejor experiencia turística en República Dominicana",
+                            size="3",
+                            color="rgba(255, 255, 255, 0.7)",
+                            text_align=["center", "center", "start"],
+                            max_width="250px",
+                            line_height="1.5",
+                        ),
+                        rx.text(
+                            "© 2024 RDExperience. Todos los derechos reservados.",
+                            size="2",
+                            color="rgba(255, 255, 255, 0.6)",
+                            white_space="nowrap",
+                            weight="medium",
+                        ),
+                        spacing="4",
+                        align_items=[
+                            "center",
+                            "center",
+                            "start",
+                        ],
+                        flex_shrink="0",
+                    ),
+                    footer_items_destinations(),
+                    footer_items_services(),
+                    footer_items_company(),
+                    justify="between",
+                    spacing="8",
+                    flex_direction=["column", "column", "row"],
+                    flex_wrap="wrap",
+                ),
+                rx.divider(color_scheme="gray", opacity="0.3"),
+                rx.hstack(
+                    rx.hstack(
+                        footer_item("Política de Privacidad", "/#"),
+                        footer_item("Términos y Condiciones", "/#"),
+                        footer_item("Preguntas Frecuentes", "/#"),
+                        spacing="6",
+                        align="center",
+                        flex_wrap="wrap",
+                    ),
+                    socials(),
+                    justify="between",
+                    align="center",
+                    flex_direction=["column", "column", "row"],
+                    spacing="4",
+                ),
+                spacing="6",
+                align="center",
+            ),
+            max_width="1200px",
+            padding_x="2em",
+        ),
+        bg="#1a2332",
+        padding_y="3em",
+        border_top="1px solid rgba(255, 255, 255, 0.1)",
+    )
+
+
 # app = rx.App(assets_path="../assets")
 app = rx.App()
 app.add_page(index, route="/", title="RDExperience - Turismo RD")
