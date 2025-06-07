@@ -48,10 +48,10 @@ def navbar() -> rx.Component:
         
         rx.center(
             rx.hstack(
-                rx.link("Inicio", href="/", color="white", padding_x="1em", _hover={"opacity": "0.8"}),
-                rx.link("Packs", href="#descripcion.py", color="white", padding_x="1em", _hover={"opacity": "0.8"}),
-                rx.link("Sobre Nosotros", href="#", color="white", padding_x="1em", _hover={"opacity": "0.8"}),
-                rx.link("Contactamos", href="#", color="white", padding_x="1em", _hover={"opacity": "0.8"}),
+                rx.link("Inicio", href="", color="white", padding_x="1em", _hover={"opacity": "0.8"}),
+                rx.link("Packs", href="", color="white", padding_x="1em", _hover={"opacity": "0.8"}),
+                rx.link("Sobre Nosotros", href="", color="white", padding_x="1em", _hover={"opacity": "0.8"}),
+                rx.link("Contactamos", href="", color="white", padding_x="1em", _hover={"opacity": "0.8"}),
                 spacing="0",
             ),
             width="100%",
@@ -68,6 +68,7 @@ def navbar() -> rx.Component:
                 border_radius="full",
                 _hover={"transform": "scale(1.05)"},
                 padding_x="2em",
+                on_click=State.ir_a_lista,
             ),
             flex="1",
             display="flex",
@@ -553,6 +554,17 @@ class State(rx.State):
         {"name": "Jarabacoa", "lodgings": "15 Paquetes", "image": "/imagenes/parque3ojos.jpg"},
     ]
 
+    def ir_a_pagina(self, ruta: str):
+        return rx.redirect(ruta)
+    
+    def ir_a_lista(self):
+        return rx.redirect("/lista")
+    
+    def ir_a_santo_domingo(self):
+        return rx.redirect("/santo-domingo")
+    
+    def ir_a_punta_cana(self):
+        return rx.redirect("/punta-cana")
     @rx.var
     def visible_provinces(self) -> List[Dict[str, str]]:
         return self.provinces[self.current_slide:self.current_slide+4]
@@ -564,6 +576,8 @@ class State(rx.State):
     def prev_slide(self):
         if self.current_slide > 0:
             self.current_slide -= 1
+
+            
 
 def province_card(province: Dict[str, str]) -> rx.Component:
     return rx.box(
