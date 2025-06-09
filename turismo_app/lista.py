@@ -317,7 +317,7 @@ def resultados_busqueda() -> rx.Component:
         padding_left="2em",
     )
 
-def index() -> rx.Component:
+def lista() -> rx.Component:
     return rx.box(
         navbar(),
         
@@ -345,5 +345,3 @@ def index() -> rx.Component:
         width="100%",
     )
 
-app = rx.App()
-app.add_page(index)

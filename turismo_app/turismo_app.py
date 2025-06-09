@@ -1,6 +1,6 @@
 import reflex as rx
 from typing import List, Dict
-
+from .lista import lista
 
 
 def index() -> rx.Component:
@@ -452,34 +452,39 @@ def popular_places() -> rx.Component:
             ),
             rx.hstack(
                 *[
-                    rx.box(
-                        rx.image(
-                            src=place["image"],
-                            width="100%",
-                            height="200px",
-                            object_fit="cover",
-                            border_radius="8px",
-                        ),
-                        rx.center(
-                            rx.heading(
-                                place["name"],
-                                size="4",
-                                color="white",
-                                position="absolute",
-                                bottom="20px",
-                                left="0",
-                                right="0",
-                                text_shadow="0 2px 4px rgba(0,0,0,0.5)",
+                    rx.link(
+                        rx.box(
+                            rx.image(
+                                src=place["image"],
+                                width="100%",
+                                height="200px",
+                                object_fit="cover",
+                                border_radius="8px",
                             ),
+                            rx.center(
+                                rx.heading(
+                                    place["name"],
+                                    size="4",
+                                    color="white",
+                                    position="absolute",
+                                    bottom="20px",
+                                    left="0",
+                                    right="0",
+                                    text_shadow="0 2px 4px rgba(0,0,0,0.5)",
+                                ),
+                            ),
+                            position="relative",
+                            border_radius="8px",
+                            box_shadow="md",
+                            overflow="hidden",
+                            _hover={
+                                "transform": "scale(1.03)",
+                                "transition": "transform 0.3s",
+                            },
+                            width="100%",
+                            height="100%",
                         ),
-                        position="relative",
-                        border_radius="8px",
-                        box_shadow="md",
-                        overflow="hidden",
-                        _hover={
-                            "transform": "scale(1.03)",
-                            "transition": "transform 0.3s",
-                        },
+                        href="/lista",
                         flex="1",
                         min_width="200px",
                         margin_x="0.5em",
@@ -493,34 +498,39 @@ def popular_places() -> rx.Component:
             ),
             rx.hstack(
                 *[
-                    rx.box(
-                        rx.image(
-                            src=place["image"],
-                            width="100%",
-                            height="200px",
-                            object_fit="cover",
-                            border_radius="8px",
-                        ),
-                        rx.center(
-                            rx.heading(
-                                place["name"],
-                                size="4",
-                                color="white",
-                                position="absolute",
-                                bottom="20px",
-                                left="0",
-                                right="0",
-                                text_shadow="0 2px 4px rgba(0,0,0,0.5)",
+                    rx.link(
+                        rx.box(
+                            rx.image(
+                                src=place["image"],
+                                width="100%",
+                                height="200px",
+                                object_fit="cover",
+                                border_radius="8px",
                             ),
+                            rx.center(
+                                rx.heading(
+                                    place["name"],
+                                    size="4",
+                                    color="white",
+                                    position="absolute",
+                                    bottom="20px",
+                                    left="0",
+                                    right="0",
+                                    text_shadow="0 2px 4px rgba(0,0,0,0.5)",
+                                ),
+                            ),
+                            position="relative",
+                            border_radius="8px",
+                            box_shadow="md",
+                            overflow="hidden",
+                            _hover={
+                                "transform": "scale(1.03)",
+                                "transition": "transform 0.3s",
+                            },
+                            width="100%",
+                            height="100%",
                         ),
-                        position="relative",
-                        border_radius="8px",
-                        box_shadow="md",
-                        overflow="hidden",
-                        _hover={
-                            "transform": "scale(1.03)",
-                            "transition": "transform 0.3s",
-                        },
+                        href="/lista",
                         flex="1",
                         min_width="200px",
                         margin_x="0.5em",
@@ -793,6 +803,7 @@ def footer() -> rx.Component:
     )
 
 
-# app = rx.App(assets_path="../assets")
+
 app = rx.App()
 app.add_page(index, route="/", title="RDExperience - Turismo RD")
+app.add_page(lista, route="/lista", title="Lista")
