@@ -2,6 +2,7 @@
 import reflex as rx
 from typing import List, Dict
 
+
 class PropertyState(rx.State):
     """Estado para manejar la información de la propiedad."""
     
@@ -126,7 +127,8 @@ def property_header() -> rx.Component:
                 rx.button(
                     "Reserva ahora",
                     color_scheme="blue",
-                    size="3"
+                    size="3",
+                    on_click=lambda: rx.redirect("/reserva_acuario")
                 ),
                 spacing="2"
             ),
@@ -319,7 +321,8 @@ def reviews_section() -> rx.Component:
             rx.box(
                 rx.image(
                     src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmCfrDHAps3hamCP6CGJAYnDEI9QGwUb-vuQ&s",
-                    border_radius ="100px"
+                    border_radius ="100px",
+                    width = "40px"
                 ),
                 bg="blue.500",
                 width="32px",
@@ -607,7 +610,8 @@ def amenities_sidebar() -> rx.Component:
                 "Reserva ahora",
                 color_scheme="blue",
                 size="3",
-                width="100%"
+                width="100%",
+                on_click=lambda: rx.redirect("/reserva_acuario")
             ),
             rx.button(
                 rx.hstack(
@@ -836,7 +840,7 @@ def footer() -> rx.Component:
         border_top="1px solid rgba(255, 255, 255, 0.1)",
     )
 
-def index() -> rx.Component:
+def desc_acuario() -> rx.Component:
     """Página principal con el listado de propiedad."""
     return navbar(), rx.container(
         rx.vstack(
@@ -853,5 +857,5 @@ def index() -> rx.Component:
 
 
 
-app = rx.App()
-app.add_page(index)
+
+

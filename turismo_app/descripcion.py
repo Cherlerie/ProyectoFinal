@@ -319,7 +319,8 @@ def reviews_section() -> rx.Component:
             rx.box(
                 rx.image(
                     src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmCfrDHAps3hamCP6CGJAYnDEI9QGwUb-vuQ&s",
-                    border_radius ="100px"
+                    border_radius ="100px",
+                    width = "40px"
                 ),
                 bg="blue.500",
                 width="32px",

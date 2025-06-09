@@ -1,6 +1,8 @@
 import reflex as rx
 from typing import List, Dict
 from .lista import lista
+from .descripcion_acuario_nacional import desc_acuario
+from .reservas_acuario_nacional import reserva_acuario
 
 
 def index() -> rx.Component:
@@ -382,6 +384,7 @@ def packages_section() -> rx.Component:
                                                 size="1",
                                                 variant="solid",
                                                 color_scheme="blue",
+                                                on_click=lambda: rx.redirect("/desc_acuario")
                                             ),
                                             width="100%",
                                         ),
@@ -806,4 +809,6 @@ def footer() -> rx.Component:
 
 app = rx.App()
 app.add_page(index, route="/", title="RDExperience - Turismo RD")
+app.add_page(desc_acuario, route="/desc_acuario", title="Descripcion Acuario Nacional")
 app.add_page(lista, route="/lista", title="Lista")
+app.add_page(reserva_acuario, route="/reserva_acuario", title="Reservacion de Acuario")

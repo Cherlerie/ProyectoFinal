@@ -47,7 +47,7 @@ def aquarium_card():
     return rx.card(
         rx.hstack(
             rx.image(
-                src="imagenes/imagenes_acuario-nacional/foto principal.jpg",
+                src="/imagenes/imagenes_acuario-nacional/foto principal.jpg",
                 alt="Vista principal del Acuario Nacional",
                 width="200px",
                 height="200px",
@@ -56,7 +56,7 @@ def aquarium_card():
             ),
             rx.vstack(
                 rx.image(
-                    src="imagenes/imagenes_acuario-nacional/tunel.jpg",
+                    src="/imagenes/imagenes_acuario-nacional/tunel.jpg",
                     alt="Túnel submarino",
                     width="80px",
                     height="60px",
@@ -64,7 +64,7 @@ def aquarium_card():
                     border_radius="4px"
                 ),
                 rx.image(
-                    src="imagenes/imagenes_acuario-nacional/peces.jpg",
+                    src="/imagenes/imagenes_acuario-nacional/peces.jpg",
                     alt="Exhibición de peces tropicales",
                     width="80px",
                     height="60px",
@@ -72,7 +72,7 @@ def aquarium_card():
                     border_radius="4px"
                 ),
                 rx.image(
-                    src="imagenes/imagenes_acuario-nacional/foto afuera.jpeg",
+                    src="/imagenes/imagenes_acuario-nacional/foto afuera.jpeg",
                     alt="Vista exterior del acuario",
                     width="80px",
                     height="60px",
@@ -394,7 +394,7 @@ def contact_form():
         box_shadow="0 2px 10px rgba(0,0,0,0.1)"
     )
 
-def index():
+def reserva_acuario():
     return rx.box(
         navbar(),
         rx.box(
@@ -421,5 +421,3 @@ def index():
         min_height="100vh",
     )
 
-app = rx.App()
-app.add_page(index)
