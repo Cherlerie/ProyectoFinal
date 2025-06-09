@@ -61,6 +61,7 @@ def navbar() -> rx.Component:
         ),
         
         rx.box(
+            
             rx.button(
                 "Reservar",
                 color_scheme="blue",
@@ -68,7 +69,7 @@ def navbar() -> rx.Component:
                 border_radius="full",
                 _hover={"transform": "scale(1.05)"},
                 padding_x="2em",
-                on_click=State.ir_a_lista,
+               
             ),
             flex="1",
             display="flex",
@@ -180,112 +181,112 @@ def compact_filter() -> rx.Component:
 def packages_section() -> rx.Component:
     packages = [
         {
-            "name": "Aventura en Punta Cana",
-            "description": "Todo incluido con excursiones acuáticas",
-            "rating": 4.8,
-            "price_dop": 12500,
-            "duration": "3 días / 2 noches",
-            "image": "/imagenes/parque3ojos.jpg",
-            "features": ["Alojamiento 5 estrellas", "Transporte incluido", "Guía turístico"]
-        },
-        {
-            "name": "Cultural Santo Domingo",
-            "description": "Tour histórico por la Zona Colonial",
-            "rating": 4.6,
-            "price_dop": 8500,
-            "duration": "2 días / 1 noche",
-            "image": "/imagenes/parque3ojos.jpg",
-            "features": ["Visita a museos", "Comidas típicas", "Transporte privado"]
-        },
-        {
-            "name": "Relax en Samaná",
-            "description": "Escape a las playas vírgenes",
+            "name": "Acuario Nacional",
+            "description": "El Acuario Nacional ofrece una valiosa labor educativa y de conservación.Sus instalaciones están diseñadas para impartir información sobre las especies exhibidas y su hábitat",
             "rating": 4.9,
-            "price_dop": 15000,
-            "duration": "4 días / 3 noches",
-            "image": "/imagenes/parque3ojos.jpg",
-            "features": ["Cabaña frente al mar", "Masajes incluidos", "Tour a Salto El Limón"]
+            "price_dop": 2150,
+            "duration": "Recorrido de 2 horas",
+            "image": "/imagenes/acuario.jpeg",
+            "features": ["Experiencia 5 estrellas", "Transporte incluido", "Guía turístico"]
         },
         {
-            "name": "Montañas de Jarabacoa",
-            "description": "Aventura en el corazón de RD",
-            "rating": 4.7,
-            "price_dop": 9800,
-            "duration": "3 días / 2 noches",
-            "image": "/imagenes/parque3ojos.jpg",
-            "features": ["Rafting incluido", "Cena campestre", "Caminatas guiadas"]
+            "name": "Bahia de las Águilas",
+            "description": "Bahía de las Águilas es una de las playas más impresionantes y vírgenes de la República Dominicana.La bahía no solo es un atractivo turístico, sino también un punto clave para la conservación ambiental en la región.",
+            "rating": 4.8,
+            "price_dop": 3200,
+            "duration": "50 minutos en barco",
+            "image": "/imagenes/bahiaaguilas.jpg",
+            "features": ["Flotadores gratis", "Comidas típicas", "Transporte en barco/ Por tierra"]
         },
         {
-            "name": "City Tour Santiago",
-            "description": "Lo mejor de la ciudad corazón",
+            "name": "Cayo Levantado",
+            "description": "Cayo Levantado es una pequeña isla ubicada en la Bahía de Samaná, en la República Dominicana. Es conocida por sus playas de arena blanca y aguas cristalinas.",
+            "rating": 4.9,
+            "price_dop": 2500,
+            "duration": "40 minutos en barco",
+            "image": "/imagenes/cayolevantado1.jpg",
+            "features": ["Paseo en bote", "Comida Gratis", "Tour guiado"]
+        },
+        {
+            "name": "Isla Catalina",
+            "description": "Isla Catalina es una pequeña isla ubicada en el Mar Caribe, cerca de la costa de la República Dominicana. Actualmente, es un popular destino turístico.",
             "rating": 4.5,
-            "price_dop": 6500,
-            "duration": "1 día completo",
-            "image": "/imagenes/parque3ojos.jpg",
-            "features": ["Visita a monumentos", "Degustación de ron", "Guía especializado"]
+            "price_dop": 2800,
+            "duration": "30 minutos en barco",
+            "image": "/imagenes/isla-catalina.jpg",
+            "features": ["Snorkeling incluido", "Buceo", "Caminatas guiadas por la isla"]
         },
         {
-            "name": "Paraíso en Bahía de las Águilas",
-            "description": "Experiencia en playa virgen",
-            "rating": 4.9,
-            "price_dop": 13500,
-            "duration": "3 días / 2 noches",
-            "image": "/imagenes/parque3ojos.jpg",
-            "features": ["Camping premium", "Comida gourmet", "Snorkeling incluido"]
-        },
-        {
-            "name": "Eco-Tour Los Haitises",
-            "description": "Naturaleza y cuevas milenarias",
+            "name": "Playa el Valle",
+            "description": "Playa El Valle es una playa ubicada en la República Dominicana, conocida por su belleza natural y tranquilidad.",
             "rating": 4.8,
-            "price_dop": 11000,
-            "duration": "2 días / 1 noche",
-            "image": "/imagenes/parque3ojos.jpg",
-            "features": ["Tour en lancha", "Avistamiento de aves", "Almuerzo tradicional"]
+            "price_dop": 3500,
+            "duration": "45 minutos",
+            "image": "/imagenes/playavalle.jpeg",
+            "features": ["Caminata por la montaña", "Comida gratis", "Guía especializado"]
         },
         {
-            "name": "Lujo en Cap Cana",
-            "description": "Experiencia exclusiva en resort VIP",
-            "rating": 5.0,
-            "price_dop": 22000,
-            "duration": "4 días / 3 noches",
-            "image": "/imagenes/parque3ojos.jpg",
-            "features": ["Villa privada", "Golf incluido", "Spa ilimitado"]
-        },
-        {
-            "name": "Ruta del Café Barahona",
-            "description": "Conoce el proceso del café dominicano",
-            "rating": 4.4,
-            "price_dop": 7500,
-            "duration": "1 día completo",
-            "image": "/imagenes/parque3ojos.jpg",
-            "features": ["Tour de café", "Degustación", "Comida campesina"]
-        },
-        {
-            "name": "Aventura Extrema Constanza",
-            "description": "Para los amantes de la adrenalina",
-            "rating": 4.7,
-            "price_dop": 12800,
-            "duration": "2 días / 1 noche",
-            "image": "/imagenes/parque3ojos.jpg",
-            "features": ["Parapente", "Rappel", "Ciclismo de montaña"]
-        },
-        {
-            "name": "Romántico Bayahibe",
-            "description": "Escape para parejas",
+            "name": "Isla Saona",
+            "description": "La Isla Saona es uno de los destinos turísticos más emblemáticos y visitados de la República Dominicana. A pesar de su popularidad, Isla Saona sigue siendo un paraíso natural relativamente bien conservado.",
             "rating": 4.9,
-            "price_dop": 16500,
-            "duration": "3 días / 2 noches",
-            "image": "/imagenes/parque3ojos.jpg",
-            "features": ["Cena en la playa", "Masaje para dos", "Tour privado"]
+            "price_dop": 4500,
+            "duration": "1 hora",
+            "image": "/imagenes/saona2.jpeg",
+            "features": ["Paseo en barco", "Comida gourmet", "Snorkeling incluido"]
         },
         {
-            "name": "Familiar Boca Chica",
-            "description": "Diversión para toda la familia",
+            "name": "Ruinas de Engombre",
+            "description": " Este sitio es significativo porque se cree que fue un asentamiento indígena que formó parte de la cultura taína antes de la llegada de los europeos.",
+            "rating": 4.5,
+            "price_dop": 1100,
+            "duration": "2 horas",
+            "image": "/imagenes/ruinassdo.jpg",
+            "features": ["Tour por el lugar", "Guía especializado", "Historia indígena"]
+        },
+        {
+            "name": "Las cuevas de Pomier",
+            "description": "El Monumento Natural Reserva Antropológica Cuevas de Borbón o del Pomier, es un área protegida que comprende un conjunto de 54 cuevas y está localizada en el paraje Pomier del municipio San Cristóbal de la provincia San Cristóbal ",
+            "rating": 5.0,
+            "price_dop": 2200,
+            "duration": "2 horas",
+            "image": "/imagenes/pomier 05.jpg",
+            "features": ["Tour", "Buffet Incluido", "Guía especializado"]
+        },
+        {
+            "name": "Parque Colón",
+            "description": "El Parque Colón es uno de los parques o plazas históricas de la Ciudad Colonial de Santo Domingo, el cual sirvió como centro principal de fiesta en la sociedad de la época colonial.",
+            "rating": 4.7,
+            "price_dop": 4000,
+            "duration": "3 horas",
+            "image": "/imagenes/colon.jpeg",
+            "features": ["Tour", "Degustación", "Comida campesina"]
+        },
+        {
+            "name": "Salto Del Limón",
+            "description": "es una impresionante cascada ubicada en la Península de Samaná, República Dominicana, conocida por su espectacular belleza y su altura de aproximadamente 50 metros.",
+            "rating": 4.7,
+            "price_dop": 1800,
+            "duration": "3 días / 2 noches",
+            "image": "/imagenes/saltoellimon.jpg",
+            "features": ["Cascada", "Rappel", "Flora y Fauna"]
+        },
+        {
+            "name": "Dunas de Baní",
+            "description": " Paisaje desértico único en el Caribe, con dunas que alcanzan hasta 35 metros de altura, Buen sitio para senderismo, fotografía y excursiones educativas. Vista impresionante del mar Caribe desde lo alto de las dunas.",
+            "rating": 5.9,
+            "price_dop": 16500,
+            "duration": "1 días / 0 noches",
+            "image": "/imagenes/dunasdebani.jpg",
+            "features": ["Almuerzo en la playa", "Masaje para dos", "Tour privado"]
+        },
+        {
+            "name": "Cabo Rojo",
+            "description": "Playa de aguas turquesas intensas y arena clara y casi virgen, cercano a la Bahía de las Águilas, considerada una de las playas más hermosas del Caribe. Ideal para turismo ecológico, relajación y contacto con la naturaleza.",
             "rating": 4.3,
             "price_dop": 9500,
             "duration": "2 días / 1 noche",
-            "image": "/imagenes/parque3ojos.jpg",
-            "features": ["Actividades infantiles", "Piscina familiar", "Show nocturno"]
+            "image": "/imagenes/caborojo.png",
+            "features": ["Actividades infantiles", "Playa familiar", "Show nocturno"]
         }
     ]
     
@@ -423,12 +424,12 @@ def packages_section() -> rx.Component:
 
 def popular_places() -> rx.Component:
     places = [
-        {"name": "Punta Cana", "image": "/imagenes/parque3ojos.jpg"},
-        {"name": "Santo Domingo", "image": "/imagenes/parque3ojos.jpg"},
-        {"name": "Samaná", "image": "/imagenes/parque3ojos.jpg"},
-        {"name": "Santiago", "image": "/imagenes/parque3ojos.jpg"},
-        {"name": "La Romana", "image": "/imagenes/parque3ojos.jpg"},
-        {"name": "Puerto Plata", "image": "/imagenes/parque3ojos.jpg"}
+        {"name": "Punta Cana", "image": "/imagenes/puntacana.jpg"},
+        {"name": "Santo Domingo", "image": "/imagenes/santodomingo.jpg"},
+        {"name": "Samaná", "image": "/imagenes/samana.jpg"},
+        {"name": "Santiago", "image": "/imagenes/santiago.jpg"},
+        {"name": "La Romana", "image": "/imagenes/laromana.jpg"},
+        {"name": "Puerto Plata", "image": "/imagenes/puertoplata.jpg"}
     ]
 
     first_row = places[:3]
@@ -544,27 +545,17 @@ def popular_places() -> rx.Component:
 class State(rx.State):
     current_slide: int = 0
     provinces: List[Dict[str, str]] = [
-        {"name": "Santo Domingo", "lodgings": "75 Paquetes", "image": "/imagenes/parque3ojos.jpg"},
-        {"name": "Punta Cana", "lodgings": "1,45 Paquetes", "image": "/imagenes/parque3ojos.jpg"},
-        {"name": "Puerto Plata", "lodgings": "42 Paquetes", "image": "/imagenes/parque3ojos.jpg"},
-        {"name": "Santiago", "lodgings": "38 Paquetes", "image": "/imagenes/parque3ojos.jpg"},
-        {"name": "Las Terrenas", "lodgings": "51 Paquetes", "image": "/imagenes/parque3ojos.jpg"},
-        {"name": "Boca Chica", "lodgings": "20 Paquetes", "image": "/imagenes/parque3ojos.jpg"},
-        {"name": "La Romana", "lodgings": "31 Paquetes", "image": "/imagenes/parque3ojos.jpg"},
-        {"name": "Jarabacoa", "lodgings": "15 Paquetes", "image": "/imagenes/parque3ojos.jpg"},
+        {"name": "Santo Domingo", "lodgings": "75 Paquetes", "image": "imagenes/santodomingo.jpg"},
+        {"name": "Punta Cana", "lodgings": "1,45 Paquetes", "image": "imagenes/puntacana.jpg"},
+        {"name": "Puerto Plata", "lodgings": "42 Paquetes", "image": "imagenes/puertoplata.jpg"},
+        {"name": "Santiago", "lodgings": "38 Paquetes", "image": "imagenes/santiago.jpg"},
+        {"name": "Las Terrenas", "lodgings": "51 Paquetes", "image": "imagenes/Lasterrenas.jpg"},
+        {"name": "Boca Chica", "lodgings": "20 Paquetes", "image": "imagenes/bocachica.jpg"},
+        {"name": "La Romana", "lodgings": "31 Paquetes", "image": "imagenes/laromana.jpg"},
+        {"name": "Jarabacoa", "lodgings": "15 Paquetes", "image": "imagenes/Jarabacoa.jpeg"},
     ]
 
-    def ir_a_pagina(self, ruta: str):
-        return rx.redirect(ruta)
-    
-    def ir_a_lista(self):
-        return rx.redirect("/lista")
-    
-    def ir_a_santo_domingo(self):
-        return rx.redirect("/santo-domingo")
-    
-    def ir_a_punta_cana(self):
-        return rx.redirect("/punta-cana")
+   
     @rx.var
     def visible_provinces(self) -> List[Dict[str, str]]:
         return self.provinces[self.current_slide:self.current_slide+4]
