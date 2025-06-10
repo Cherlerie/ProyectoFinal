@@ -3,6 +3,10 @@ from typing import List, Dict
 from .lista import lista
 from .descripcion_acuario_nacional import desc_acuario
 from .reservas_acuario_nacional import reserva_acuario
+from .descripcion_bahiaAguilas import desc_bahia
+from .reservas_bahia_de_las_aguilas import reserva_bahia
+from .descripcion_cayolevantado import desc_cayo
+from .reservas_cayo_levantado import reserva_cayo
 
 
 def index() -> rx.Component:
@@ -189,7 +193,8 @@ def packages_section() -> rx.Component:
             "price_dop": 2150,
             "duration": "Recorrido de 2 horas",
             "image": "/imagenes/acuario.jpeg",
-            "features": ["Experiencia 5 estrellas", "Transporte incluido", "Guía turístico"]
+            "features": ["Experiencia 5 estrellas", "Transporte incluido", "Guía turístico"],
+            "path": "/desc_acuario"
         },
         {
             "name": "Bahia de las Águilas",
@@ -198,7 +203,8 @@ def packages_section() -> rx.Component:
             "price_dop": 3200,
             "duration": "50 minutos en barco",
             "image": "/imagenes/bahiaaguilas.jpg",
-            "features": ["Flotadores gratis", "Comidas típicas", "Transporte en barco/ Por tierra"]
+            "features": ["Flotadores gratis", "Comidas típicas", "Transporte en barco/ Por tierra"],
+            "path": "/desc_bahia"
         },
         {
             "name": "Cayo Levantado",
@@ -207,7 +213,8 @@ def packages_section() -> rx.Component:
             "price_dop": 2500,
             "duration": "40 minutos en barco",
             "image": "/imagenes/cayolevantado1.jpg",
-            "features": ["Paseo en bote", "Comida Gratis", "Tour guiado"]
+            "features": ["Paseo en bote", "Comida Gratis", "Tour guiado"],
+            "path": "/desc_cayo"
         },
         {
             "name": "Isla Catalina",
@@ -216,7 +223,8 @@ def packages_section() -> rx.Component:
             "price_dop": 2800,
             "duration": "30 minutos en barco",
             "image": "/imagenes/isla-catalina.jpg",
-            "features": ["Snorkeling incluido", "Buceo", "Caminatas guiadas por la isla"]
+            "features": ["Snorkeling incluido", "Buceo", "Caminatas guiadas por la isla"],
+            "path": "/desc_acuario"
         },
         {
             "name": "Playa el Valle",
@@ -225,7 +233,8 @@ def packages_section() -> rx.Component:
             "price_dop": 3500,
             "duration": "45 minutos",
             "image": "/imagenes/playavalle.jpeg",
-            "features": ["Caminata por la montaña", "Comida gratis", "Guía especializado"]
+            "features": ["Caminata por la montaña", "Comida gratis", "Guía especializado"],
+            "path": "/desc_acuario"
         },
         {
             "name": "Isla Saona",
@@ -234,7 +243,8 @@ def packages_section() -> rx.Component:
             "price_dop": 4500,
             "duration": "1 hora",
             "image": "/imagenes/saona2.jpeg",
-            "features": ["Paseo en barco", "Comida gourmet", "Snorkeling incluido"]
+            "features": ["Paseo en barco", "Comida gourmet", "Snorkeling incluido"],
+            "path": "/desc_acuario"
         },
         {
             "name": "Ruinas de Engombre",
@@ -243,7 +253,8 @@ def packages_section() -> rx.Component:
             "price_dop": 1100,
             "duration": "2 horas",
             "image": "/imagenes/ruinassdo.jpg",
-            "features": ["Tour por el lugar", "Guía especializado", "Historia indígena"]
+            "features": ["Tour por el lugar", "Guía especializado", "Historia indígena"],
+            "path": "/desc_acuario"
         },
         {
             "name": "Las cuevas de Pomier",
@@ -252,7 +263,8 @@ def packages_section() -> rx.Component:
             "price_dop": 2200,
             "duration": "2 horas",
             "image": "/imagenes/pomier 05.jpg",
-            "features": ["Tour", "Buffet Incluido", "Guía especializado"]
+            "features": ["Tour", "Buffet Incluido", "Guía especializado"],
+            "path": "/desc_acuario"
         },
         {
             "name": "Parque Colón",
@@ -261,7 +273,8 @@ def packages_section() -> rx.Component:
             "price_dop": 4000,
             "duration": "3 horas",
             "image": "/imagenes/colon.jpeg",
-            "features": ["Tour", "Degustación", "Comida campesina"]
+            "features": ["Tour", "Degustación", "Comida campesina"],
+            "path": "/desc_acuario"
         },
         {
             "name": "Salto Del Limón",
@@ -270,16 +283,18 @@ def packages_section() -> rx.Component:
             "price_dop": 1800,
             "duration": "3 días / 2 noches",
             "image": "/imagenes/saltoellimon.jpg",
-            "features": ["Cascada", "Rappel", "Flora y Fauna"]
+            "features": ["Cascada", "Rappel", "Flora y Fauna"],
+            "path": "/desc_acuario"
         },
         {
             "name": "Dunas de Baní",
             "description": " Paisaje desértico único en el Caribe, con dunas que alcanzan hasta 35 metros de altura, Buen sitio para senderismo, fotografía y excursiones educativas. Vista impresionante del mar Caribe desde lo alto de las dunas.",
-            "rating": 5.9,
+            "rating": 4.9,
             "price_dop": 16500,
             "duration": "1 días / 0 noches",
             "image": "/imagenes/dunasdebani.jpg",
-            "features": ["Almuerzo en la playa", "Masaje para dos", "Tour privado"]
+            "features": ["Almuerzo en la playa", "Masaje para dos", "Tour privado"],
+            "path": "/desc_acuario"
         },
         {
             "name": "Cabo Rojo",
@@ -288,7 +303,8 @@ def packages_section() -> rx.Component:
             "price_dop": 9500,
             "duration": "2 días / 1 noche",
             "image": "/imagenes/caborojo.png",
-            "features": ["Actividades infantiles", "Playa familiar", "Show nocturno"]
+            "features": ["Actividades infantiles", "Playa familiar", "Show nocturno"],
+            "path": "/desc_acuario"
         }
     ]
     
@@ -384,7 +400,7 @@ def packages_section() -> rx.Component:
                                                 size="1",
                                                 variant="solid",
                                                 color_scheme="blue",
-                                                on_click=lambda: rx.redirect("/desc_acuario")
+                                                on_click=rx.redirect(pkg["path"])
                                             ),
                                             width="100%",
                                         ),
@@ -812,3 +828,7 @@ app.add_page(index, route="/", title="RDExperience - Turismo RD")
 app.add_page(desc_acuario, route="/desc_acuario", title="Descripcion Acuario Nacional")
 app.add_page(lista, route="/lista", title="Lista")
 app.add_page(reserva_acuario, route="/reserva_acuario", title="Reservacion de Acuario")
+app.add_page(desc_bahia, route="/desc_bahia", title="Descripcion Bahia de las Aguilas")
+app.add_page(reserva_bahia, route="/reserva_bahia", title="Reservacion de Bahia de las Aguilas")
+app.add_page(desc_cayo, route="/desc_cayo", title="Descripcion Cayo Levantadi")
+app.add_page(reserva_cayo, route="/reserva_cayo", title="Reservacion de Cayo Levantado")

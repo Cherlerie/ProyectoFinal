@@ -47,7 +47,7 @@ def cayo_levantado_card():
     return rx.card(
         rx.hstack(
             rx.image(
-                src="imagenes/imagenes_cayo-levantado/vista arriba.jpg",
+                src="/imagenes/imagenes_cayo-levantado/vista arriba.jpg",
                 alt="Vista aérea de Cayo Levantado",
                 width="200px",
                 height="200px",
@@ -56,7 +56,7 @@ def cayo_levantado_card():
             ),
             rx.vstack(
                 rx.image(
-                    src="imagenes/imagenes_cayo-levantado/playa.jpg",
+                    src="/imagenes/imagenes_cayo-levantado/playa.jpg",
                     alt="Playa de Cayo Levantado",
                     width="80px",
                     height="60px",
@@ -64,7 +64,7 @@ def cayo_levantado_card():
                     border_radius="4px"
                 ),
                 rx.image(
-                    src="imagenes/imagenes_cayo-levantado/agua.jpg",
+                    src="/imagenes/imagenes_cayo-levantado/agua.jpg",
                     alt="Aguas cristalinas Cayo Levantado",
                     width="80px",
                     height="60px",
@@ -72,7 +72,7 @@ def cayo_levantado_card():
                     border_radius="4px"
                 ),
                 rx.image(
-                    src="imagenes/imagenes_cayo-levantado/paisaje.jpg",
+                    src="/imagenes/imagenes_cayo-levantado/paisaje.jpg",
                     alt="Paisaje natural Cayo Levantado",
                     width="80px",
                     height="60px",
@@ -394,7 +394,7 @@ def contact_form():
         box_shadow="0 2px 10px rgba(0,0,0,0.1)"
     )
 
-def index():
+def reserva_cayo():
     return rx.box(
         navbar(),
         rx.box(
@@ -421,5 +421,3 @@ def index():
         min_height="100vh",
     )
 
-app = rx.App()
-app.add_page(index)

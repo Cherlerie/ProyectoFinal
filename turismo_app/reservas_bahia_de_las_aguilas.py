@@ -47,7 +47,7 @@ def bahia_card():
     return rx.card(
         rx.hstack(
             rx.image(
-                src="imagenes/imagenes_bahia-de-las-aguilas/foto arriba.jpg",
+                src="/imagenes/imagenes_bahia-de-las-aguilas/foto arriba.jpg",
                 alt="Vista aérea de Bahía de las Águilas",
                 width="200px",
                 height="200px",
@@ -56,7 +56,7 @@ def bahia_card():
             ),
             rx.vstack(
                 rx.image(
-                    src="imagenes/imagenes_bahia-de-las-aguilas/playa.jpg",
+                    src="/imagenes/imagenes_bahia-de-las-aguilas/playa.jpg",
                     alt="Playa virgen Bahía de las Águilas",
                     width="80px",
                     height="60px",
@@ -64,7 +64,7 @@ def bahia_card():
                     border_radius="4px"
                 ),
                 rx.image(
-                    src="imagenes/imagenes_bahia-de-las-aguilas/agua.jpeg",
+                    src="/imagenes/imagenes_bahia-de-las-aguilas/agua.jpeg",
                     alt="Aguas cristalinas Bahía de las Águilas",
                     width="80px",
                     height="60px",
@@ -72,7 +72,7 @@ def bahia_card():
                     border_radius="4px"
                 ),
                 rx.image(
-                    src="imagenes/imagenes_bahia-de-las-aguilas/paisaje.jpg",
+                    src="/imagenes/imagenes_bahia-de-las-aguilas/paisaje.jpg",
                     alt="Paisaje natural Bahía de las Águilas",
                     width="80px",
                     height="60px",
@@ -394,7 +394,7 @@ def contact_form():
         box_shadow="0 2px 10px rgba(0,0,0,0.1)"
     )
 
-def index():
+def reserva_bahia():
     return rx.box(
         navbar(),
         rx.box(
@@ -420,6 +420,3 @@ def index():
         background="#091F31",
         min_height="100vh",
     )
-
-app = rx.App()
-app.add_page(index)
