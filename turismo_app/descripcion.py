@@ -871,8 +871,3 @@ def index() -> rx.Component:
         py="6",
         background = "#091F31",
     ), footer()
-
-
-
-app = rx.App()
-app.add_page(index)

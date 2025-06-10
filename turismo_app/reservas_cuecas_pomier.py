@@ -440,7 +440,7 @@ def contact_form():
         box_shadow="0 2px 10px rgba(0,0,0,0.1)"
     )
 
-def index():
+def reserva_cuevas():
     return rx.box(
         navbar(),
         rx.box(
@@ -470,6 +470,3 @@ def index():
         background="#091F31",
         min_height="100vh",
     )
-
-app = rx.App()
-app.add_page(index)

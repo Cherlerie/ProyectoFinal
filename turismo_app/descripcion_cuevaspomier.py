@@ -126,7 +126,8 @@ def property_header() -> rx.Component:
                 rx.button(
                     "Reserva ahora",
                     color_scheme="blue",
-                    size="3"
+                    size="3",
+                    on_click=lambda: rx.redirect("/reserva_cuevas")
                 ),
                 spacing="2"
             ),
@@ -319,7 +320,8 @@ def reviews_section() -> rx.Component:
             rx.box(
                 rx.image(
                     src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR_YlXxFYyQ1o_5MgvI8Ziy0LH2yU-nA8jg4Rg6jRR0Zc16wpX1W3Jl3kl1chMtgveFpes&usqp=CAU",
-                    border_radius ="100px"
+                    border_radius ="100px",
+                    width = "40px"
                 ),
                 bg="blue.500",
                 width="32px",
@@ -547,7 +549,8 @@ def amenities_sidebar() -> rx.Component:
                 "Reserva ahora",
                 color_scheme="blue",
                 size="3",
-                width="100%"
+                width="100%",
+                on_click=lambda: rx.redirect("/reserva_cuevas")
             ),
             rx.button(
                 rx.hstack(
@@ -776,7 +779,7 @@ def footer() -> rx.Component:
         border_top="1px solid rgba(255, 255, 255, 0.1)",
     )
 
-def index() -> rx.Component:
+def desc_cuevas() -> rx.Component:
     """Página principal con el listado de propiedad."""
     return navbar(), rx.container(
         rx.vstack(
@@ -793,5 +796,3 @@ def index() -> rx.Component:
 
 
 
-app = rx.App()
-app.add_page(index)

@@ -7,6 +7,12 @@ from .descripcion_bahiaAguilas import desc_bahia
 from .reservas_bahia_de_las_aguilas import reserva_bahia
 from .descripcion_cayolevantado import desc_cayo
 from .reservas_cayo_levantado import reserva_cayo
+from .descripcion_cuevaspomier import desc_cuevas
+from .reservas_cuecas_pomier import reserva_cuevas
+from .descripcion_islacatalina import desc_isla
+from .reservas_isla_catalina import reserva_isla
+from .descripcion_PlayaElValle import desc_playa
+from .reservas_playa_el_valle import reserva_playa
 
 
 def index() -> rx.Component:
@@ -54,8 +60,8 @@ def navbar() -> rx.Component:
         
         rx.center(
             rx.hstack(
-                rx.link("Inicio", href="", color="white", padding_x="1em", _hover={"opacity": "0.8"}),
-                rx.link("Packs", href="", color="white", padding_x="1em", _hover={"opacity": "0.8"}),
+                rx.link("Inicio", href="/", color="white", padding_x="1em", _hover={"opacity": "0.8"}),
+                rx.link("Packs", href="/lista", color="white", padding_x="1em", _hover={"opacity": "0.8"}),
                 rx.link("Sobre Nosotros", href="", color="white", padding_x="1em", _hover={"opacity": "0.8"}),
                 rx.link("Contactamos", href="", color="white", padding_x="1em", _hover={"opacity": "0.8"}),
                 spacing="0",
@@ -224,7 +230,7 @@ def packages_section() -> rx.Component:
             "duration": "30 minutos en barco",
             "image": "/imagenes/isla-catalina.jpg",
             "features": ["Snorkeling incluido", "Buceo", "Caminatas guiadas por la isla"],
-            "path": "/desc_acuario"
+            "path": "/desc_isla"
         },
         {
             "name": "Playa el Valle",
@@ -234,7 +240,17 @@ def packages_section() -> rx.Component:
             "duration": "45 minutos",
             "image": "/imagenes/playavalle.jpeg",
             "features": ["Caminata por la montaña", "Comida gratis", "Guía especializado"],
-            "path": "/desc_acuario"
+            "path": "/desc_playa"
+        },
+        {
+            "name": "Las cuevas de Pomier",
+            "description": "El Monumento Natural Reserva Antropológica Cuevas de Borbón o del Pomier, es un área protegida que comprende un conjunto de 54 cuevas y está localizada en el paraje Pomier del municipio San Cristóbal de la provincia San Cristóbal ",
+            "rating": 5.0,
+            "price_dop": 2200,
+            "duration": "2 horas",
+            "image": "/imagenes/pomier 05.jpg",
+            "features": ["Tour", "Buffet Incluido", "Guía especializado"],
+            "path": "/desc_cuevas"
         },
         {
             "name": "Isla Saona",
@@ -254,16 +270,6 @@ def packages_section() -> rx.Component:
             "duration": "2 horas",
             "image": "/imagenes/ruinassdo.jpg",
             "features": ["Tour por el lugar", "Guía especializado", "Historia indígena"],
-            "path": "/desc_acuario"
-        },
-        {
-            "name": "Las cuevas de Pomier",
-            "description": "El Monumento Natural Reserva Antropológica Cuevas de Borbón o del Pomier, es un área protegida que comprende un conjunto de 54 cuevas y está localizada en el paraje Pomier del municipio San Cristóbal de la provincia San Cristóbal ",
-            "rating": 5.0,
-            "price_dop": 2200,
-            "duration": "2 horas",
-            "image": "/imagenes/pomier 05.jpg",
-            "features": ["Tour", "Buffet Incluido", "Guía especializado"],
             "path": "/desc_acuario"
         },
         {
@@ -830,5 +836,11 @@ app.add_page(lista, route="/lista", title="Lista")
 app.add_page(reserva_acuario, route="/reserva_acuario", title="Reservacion de Acuario")
 app.add_page(desc_bahia, route="/desc_bahia", title="Descripcion Bahia de las Aguilas")
 app.add_page(reserva_bahia, route="/reserva_bahia", title="Reservacion de Bahia de las Aguilas")
-app.add_page(desc_cayo, route="/desc_cayo", title="Descripcion Cayo Levantadi")
+app.add_page(desc_cayo, route="/desc_cayo", title="Descripcion Cayo Levantado")
 app.add_page(reserva_cayo, route="/reserva_cayo", title="Reservacion de Cayo Levantado")
+app.add_page(desc_playa, route="/desc_playa", title="Descripcion Playa el Valle")
+app.add_page(reserva_playa, route="/reserva_playa", title="Reservacion de Playa el Valle")
+app.add_page(desc_cuevas, route="/desc_cuevas", title="Descripcion Cuevas Pomier")
+app.add_page(reserva_cuevas, route="/reserva_cuevas", title="Reservacion de Cuevas Pomier")
+app.add_page(desc_isla, route="/desc_isla", title="Descripcion Isla Catalina")
+app.add_page(reserva_isla, route="/reserva_isla", title="Reserva Isla Catalina")
