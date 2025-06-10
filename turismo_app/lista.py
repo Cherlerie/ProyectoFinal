@@ -10,6 +10,7 @@ class Lugar (rx.Base):
     num_comentarios: int
     precio: str
     servicios: List[str]
+    path: str
 
 Lugares = [
    Lugar(
@@ -20,7 +21,8 @@ Lugares = [
     calificacion=9.7,
     num_comentarios=41,
     precio="Desde $60",
-    servicios=["Wifi gratis", "Tienda de recuerdos", "Cafetería"]
+    servicios=["Wifi gratis", "Tienda de recuerdos", "Cafetería"],
+    path = "/imagenes/acuario.jpeg"
 ),
 
 Lugar(
@@ -31,7 +33,8 @@ Lugar(
     calificacion=8.9,
     num_comentarios=23,
     precio="Gratis",
-    servicios=["Guías turísticos", "Zonas para fotos", "Restaurantes cercanos"]
+    servicios=["Guías turísticos", "Zonas para fotos", "Restaurantes cercanos"],
+    path = "/imagenes/colon.jpeg"
 ),
 
 Lugar(
@@ -42,7 +45,8 @@ Lugar(
     calificacion=9.5,
     num_comentarios=58,
     precio="Desde $150",
-    servicios=["Wifi gratis", "Mirador", "Tiendas de souvenirs"]
+    servicios=["Wifi gratis", "Mirador", "Tiendas de souvenirs"],
+    path = "/imagenes/teleferico.jpg"
 ),
 
 Lugar(
@@ -53,7 +57,8 @@ Lugar(
     calificacion=9.1,
     num_comentarios=67,
     precio="Desde $100",
-    servicios=["Visitas guiadas", "Áreas de descanso", "Estacionamiento"]
+    servicios=["Visitas guiadas", "Áreas de descanso", "Estacionamiento"],
+    path = "/imagenes/parque3ojos.jpg"
 ),
 
 Lugar(
@@ -64,7 +69,8 @@ Lugar(
     calificacion=9.6,
     num_comentarios=80,
     precio="Desde $200 (con guía)",
-    servicios=["Guías locales", "Puestos de comida", "Zonas de baño"]
+    servicios=["Guías locales", "Puestos de comida", "Zonas de baño"],
+    path = "/imagenes/saltoellimon.jpg"
 ),
 
 Lugar(
@@ -75,7 +81,8 @@ Lugar(
     calificacion=9.8,
     num_comentarios=92,
     precio="Acceso libre (excursiones desde $500)",
-    servicios=["Excursiones en bote", "Zona protegida", "Observación de fauna"]
+    servicios=["Excursiones en bote", "Zona protegida", "Observación de fauna"],
+    path = "/imagenes/bahiaaguilas.jpg"
 )
 
 ]
@@ -196,7 +203,7 @@ def compact_filter() -> rx.Component:
             max_width="900px",
         ),
         padding="1.5em",
-        bg="white",
+        bg="#2C3949",
         border_radius="8px",
         box_shadow="4",
         position="absolute",
@@ -212,7 +219,7 @@ def tarjeta_Lugares(Lugares: Lugar) -> rx.Component:
         rx.hstack(
             rx.box(
                 rx.image(
-                    src="o.png",  
+                    src={Lugares.path},  
                     width="200px",
                     height="150px",
                     object_fit="cover",
@@ -264,7 +271,7 @@ def tarjeta_Lugares(Lugares: Lugar) -> rx.Component:
             align_items="flex-start",
         ),
         padding="1.5em",
-        bg="white",
+        bg="#3F546E",
         border_radius="8px",
         box_shadow="sm",
         width="100%",
@@ -298,7 +305,7 @@ def filtros_laterales() -> rx.Component:
             
             width="250px",
             padding="1em",
-            bg="white",
+            bg="#2C3949",
             border_radius="8px",
             box_shadow="sm",
             position="sticky",
@@ -343,5 +350,6 @@ def lista() -> rx.Component:
         ),
         
         width="100%",
+        background = "#091F31"
     )
 
