@@ -60,3 +60,37 @@ pip install -r requirements.txt
 Por ultimo, ejecuta el servidor con:
 ```bash
 reflex run
+```
+
+
+## Créditos
+
+| Nº | Nombre         | Calificación | Participación o Aporte                                      |
+|----|----------------|--------------|-------------------------------------------------------------|
+| 1  | Gabriela       | 75           | Participación baja                                          |
+| 2  | Ashley         | 95           | Buscó información e imágenes para las páginas               |
+| 3  | Ricardo        | 75           | Participación baja                                          |
+| 4  | Karla          | 75           | Participación baja                                          |
+| 5  | Luis           | 85           | Ayudó organizando la información general del proyecto       |
+| 6  | Ambar          | 75           | Participación baja                                          |
+| 7  | Samuel         | 75           | Participación baja                                          |
+| 8  | Fabian         | 95           | Diseño en Figma                                             |
+| 9  | Masiel         | 100          | Pero claro                                                  |
+| 10 | Yomeiry        | 75           | Participación baja                                          |
+| 11 | Yorka          | 100          | La base de datos                                            |
+| 12 | Nayelis        | 75           | Participación baja                                          |
+| 13 | Gabriel        | 75           | Participación baja                                          |
+| 14 | Monserrat      | 90           | Buscó información, colocó imágenes y texto en la web        |
+| 15 | Kianna         | 95           | Hizo el diagrama de la base de datos                        |
+| 16 | Carlos Miguel  | 100          | Aplicó plantillas y realizó el footer                       |
+| 17 | Hansel         | 100          | Usó las plantillas y completó los contenidos de varias páginas |
+| 18 | Elian          | 75           | Participación limitada                                      |
+| 19 | Francisco      | 100          | Pero claro x2                                               |
+| 20 | Carlos Elian   | 95           | Diseño en Figma                                             |
+| 21 | Jade           | 95           | Participó en el diseño con Figma    
+
+### A TENER EN CUENTA
+- Estas notas fueron puestas según el esfuerzo y la participación que consideramos que cada quien tuvo durante el proyecto.  
+
+
+- Si hay dudas o comentarios sobre alguna nota, el profesor puede consultarlo sin problema.
