@@ -16,6 +16,7 @@ El objetivo principal del proyecto es proporcionar una **plataforma web funciona
 ---
 
 ## 📁 Estructura del Proyecto
+```
 ├── .states/ # Estados del frontend
 ├── .web/ # Archivos de interfaz web
 ├── assets/ # Recursos estáticos (imágenes, íconos, etc.)
@@ -44,6 +45,7 @@ El objetivo principal del proyecto es proporcionar una **plataforma web funciona
 ├── README.md
 ├── requirements.txt # Dependencias del proyecto
 └── rxconfig.py # Configuración Reflex
+```
 
 ## ▶️ Ejecución
 
