@@ -51,7 +51,7 @@ El objetivo principal del proyecto es proporcionar una **plataforma web funciona
 
 Clonar el repositorio con :
 ```bash
-git clone https://github.com/tuusuario/reflex-reservas.git
+git clone https://github.com/Cherlerie/ProyectoFinal
 ```
 
 Instala las dependencias con:
